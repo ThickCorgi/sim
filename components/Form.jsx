@@ -9,7 +9,7 @@ export default function Form(){
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    let rege = /[^0-9a-z]/gi
+    let rege = /[^0-9a-z-]/gi
     const numbers = input.split(',').map(el=> el.trim().replace(rege, ''))
     while(numbers.includes('')){
       let inx = numbers.indexOf('')
