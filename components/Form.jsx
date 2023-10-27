@@ -11,10 +11,11 @@ export default function Form(){
     e.preventDefault()
     let rege = /[^0-9a-z]/gi
     const numbers = input.split(',').map(el=> el.trim().replace(rege, ''))
-    let index = numbers.indexOf('')
-    if(index>-1){
-      numbers.splice(index,1)
+    while(numbers.includes('')){
+      let inx = numbers.indexOf('')
+      numbers.splice(inx,1)
     }
+    
     setList([...list, ...numbers])
     setInput('')
   }
