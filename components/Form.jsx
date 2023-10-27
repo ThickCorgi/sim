@@ -4,7 +4,7 @@ import {BiNote} from "react-icons/bi"
 
 
 export default function Form(){
-  const [list, setList] = useState([])
+  const [list, setList] = useState([1,2,3,4])
   const [input, setInput] = useState('')
 
   const handleSubmit = (e) => {
@@ -33,7 +33,7 @@ export default function Form(){
       <>
     
        
-       <form className="flex justify-center mb-10" onSubmit={handleSubmit}>
+       <form className="flex justify-center mb-20 pb-20 " onSubmit={handleSubmit}>
           <label>
             Array: 
             <input 
@@ -51,10 +51,10 @@ export default function Form(){
         </form> 
 
 
-        <div className="list-none flex justify-around mb-10">
+        <div className="list-none flex justify-around ">
           {list.map((el,indx)=>{
           return (
-             <li className="border border-black px-5 py-3 m-2 text-4xl " key={indx}>{el}</li>
+             <li className="border border-black px-5 py-3  text-4xl " key={indx}>{el}</li>
 
            )}
            )}
