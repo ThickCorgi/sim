@@ -1,16 +1,13 @@
-import ButtonIe from "./ButtonI"
-import ButtonJ from "./ButtonJ"
-import ButtonK from "./ButtonK"
-import ButtonIndex from "./ButtonIndex"
+import PointerButton from "./buttons/PointerButton"
 
 export default function Toolbar() {
  
   return (
     <div className="flex flex-row ">
-      <ButtonIe />
-      <ButtonJ />
-      <ButtonK />
-      <ButtonIndex />
+      <PointerButton name="i" arrow="i" color="red"/>
+      <PointerButton name="j" arrow="j" color="green"/>
+      <PointerButton name="k" arrow="k" color="blue"/>
+    
     </div>
   )  
   

@@ -6,15 +6,15 @@ import Toolbar from "@/components/Toolbar"
 export default function Home() {
   return (
     <main className="m-8 mt-20">
-      <Toolbar/>
+      <Toolbar />
       <div className="flex justify-center">
         <h1 className="text-lg font-bold">StudyView</h1>
       </div>
+      <Form />
 
   
 
-      <Form/>
-      {/* <List/> */}
+
 
 
 

@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react"
 import {BiNote} from "react-icons/bi"
-
+import Display from "./Display"
 
 export default function Form(){
   const [list, setList] = useState([1,2,3,4])
@@ -31,9 +31,7 @@ export default function Form(){
 
   return (
       <>
-    
-       
-       <form className="flex justify-center mb-20 pb-20 " onSubmit={handleSubmit}>
+       <form className="flex justify-center pb-20 " onSubmit={handleSubmit}>
           <label>
             Array: 
             <input 
@@ -50,14 +48,13 @@ export default function Form(){
           <button className="border border-slate-900 ml-1 px-1 " onClick={handleDecrease}>Desc Order</button>
         </form> 
 
+        <div className="flex justify-center mb-10">
+          <h4>length: {list.length}</h4>
+        </div>
 
-        <div className="list-none flex justify-around ">
-          {list.map((el,indx)=>{
-          return (
-             <li className="border border-black px-5 py-3  text-4xl " key={indx}>{el}</li>
 
-           )}
-           )}
+        <div>
+              <Display array={list}/>
         </div>
       </>
   )
